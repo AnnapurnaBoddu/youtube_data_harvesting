@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from data_extract import channel_details
+
 
 def mongodb_data(data):
     """
@@ -24,7 +24,8 @@ def mongodb_data(data):
         return f'inserted documented id {result.inserted_id}'
 
     # Print the inserted document's ID
-    #print("Inserted document ID:", result.inserted_id)
+    # print("Inserted document ID:", result.inserted_id)
+
 
 def mongodb_collection_names():
     """
@@ -35,5 +36,3 @@ def mongodb_collection_names():
     db = client['youtube']
     collection_names = db.list_collection_names()
     return collection_names
-
-
